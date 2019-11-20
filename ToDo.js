@@ -21,6 +21,7 @@ function addLine() {
         localStorage.setItem(todonum, document.getElementById("newToDo").value);
         document.getElementsByClassName("toDo")[todonum].innerHTML = localStorage.getItem(todonum);
         document.getElementById("newToDo").value = "";
+        document.getElementById("newToDo").focus();
         todonum += 1;
         localStorage.setItem("totalnum", todonum)
     } else {
