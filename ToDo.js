@@ -20,6 +20,7 @@ function addLine() {
         document.getElementsByClassName(todonum)[2].style.display = "inline";
         localStorage.setItem(todonum, document.getElementById("newToDo").value);
         document.getElementsByClassName("toDo")[todonum].innerHTML = localStorage.getItem(todonum);
+        document.getElementById("newToDo").value = "";
         todonum += 1;
         localStorage.setItem("totalnum", todonum)
     } else {
